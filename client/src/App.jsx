@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import "./App.css";
 import Input from "./components/Input";
+import PlayersTable from "./components/PlayersTable";
 
 function App() {
   const [score, setScores] = useState({});
@@ -35,6 +36,7 @@ function App() {
   }, []);
   return (
     <>
+    <PlayersTable />
       <h1>React Multiplayer Dashboard</h1>
 
       <Input
